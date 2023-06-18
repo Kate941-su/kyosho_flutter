@@ -4,7 +4,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'effect_kind/effect_kind_page.dart';
 
 void main() {
-  runApp(ProviderScope(child: MyApp()));
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends HookConsumerWidget {
@@ -19,19 +19,15 @@ class MyApp extends HookConsumerWidget {
       home: Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
-          backgroundColor: Colors.black12,
-          leading: IconButton(
-            icon: Icon(Icons.settings),
-            onPressed: (){},
-          ),
-          title: Text(
+          backgroundColor: Colors.black,
+          title: const Text(
             '巨匠',
             style: TextStyle(
-              color: Colors.blue,
+              color: Colors.white,
             ),
           ),
         ),
-        body: Center(
+        body: const Center(
           child: EffectKindPage(),
         ),
       ),
